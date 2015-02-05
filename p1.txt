@@ -1,0 +1,23 @@
+CSCI 3308: Project Part 1 – Proposal Submission + Repository
+
+Who: Mason McNutt, Braden Romero, Slaton Spangler, Cameron Tierney
+
+Title: (Chop)in: Music Discovery App
+
+Description: An android app that will aids in the discovery of new music. It will play short segments of songs and the user will swipe to save/play /skip songs. New songs are selected based on artists’ influence on other artists. App will record all history and build playlists for user to go back to later. 
+
+Vision statement: Our goal is to provide new and interesting musical possibilities to the masses while serving as a tool for artists to evaluate their music.
+
+Motivation: We want to provide a music discovery system the sets itself apart from the other music apps (Pandora, Shazam, etc.).  Our app will be more fast paced, more about discovery, more active.
+
+Risks: 
+•	3/4 members have not developed for android
+•	Storage/server needed for songs
+
+Mitigation strategy for dealing with risks:
+•	Project is small enough scope to make up for our lack of android and server experience
+•	Utilize available resources to learn what we don’t know
+
+VCS: GitHub
+
+VCS Link: https://github.com/Branden-Romero/chopin
