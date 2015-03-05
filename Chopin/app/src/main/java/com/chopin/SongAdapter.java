@@ -39,12 +39,19 @@ public class SongAdapter extends BaseAdapter{
     }
 
     @Override
-    public View getView(int arg0, View arg1, ViewGroup arg2) {
+    public View getView(int position, View convertView, ViewGroup parent) {
         // TODO Auto-generated method stub
         LinearLayout songLay = (LinearLayout)songInf.inflate(R.layout.song, parent, false);
         TextView songView = (TextView)songLay.findViewById(R.id.song_title);
         TextView artistView = (TextView)songLay.findViewById(R.id.song_artist);
 
-        return null;
+        Song currSong = songs.get(position);
+
+        songView.setText(currSong.getTitle());
+        artistView.setText(currSong.getArtist());
+
+        songLay.setTag(position);
+
+        return songLay;
     }
 }
