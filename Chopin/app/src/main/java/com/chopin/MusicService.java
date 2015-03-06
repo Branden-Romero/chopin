@@ -77,6 +77,7 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
 
     @Override
     public boolean onError(MediaPlayer mp, int what, int extra) {
+        Log.v("Music Player", "Playback Error");
         mp.reset();
         return false;
     }
@@ -91,11 +92,11 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
         Notification.Builder builder = new Notification.Builder(this);
 
         builder.setContentIntent(pendInt)
-                .setSmallIcon(R.drawable.play)
-                .setTicker(songTitle)
-                .setOngoing(true)
-                .setContentTitle("Playing")
-                .setContentText(songTitle);
+        .setSmallIcon(R.drawable.play)
+        .setTicker(songTitle)
+        .setOngoing(true)
+        .setContentTitle("Playing")
+        .setContentText(songTitle);
         Notification not = builder.build();
 
         startForeground(NOTIFY_ID, not);
@@ -143,7 +144,8 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
     }
     public void playNext(){
         songPosn++;
-        if(songPosn > songs.size()) songPosn=0;
+        if(songPosn > songs.size())
+            songPosn=0;
         playSong();
     }
     @Override

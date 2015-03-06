@@ -49,7 +49,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
     private ServiceConnection musicConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            MusicService.MusicBinder binder = (MusicService.MusicBinder)service;
+            MusicBinder binder = (MusicBinder)service;
             musicSrv = binder.getService();
             musicSrv.setList(songList);
             musicBound = true;
@@ -57,6 +57,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
+
             musicBound = false;
         }
     };
@@ -85,9 +86,16 @@ public class MainActivity extends Activity implements MediaPlayerControl{
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-
-
+        switch (item.getItemId()) {
+            case R.id.action_end:
+            stopService(playIntent);
+            musicSrv=null;
+            System.exit(0);
+        break;
+        }
         return super.onOptionsItemSelected(item);
+
+
     }
 
     public void getSongList(){
@@ -136,7 +144,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
 
     @Override
     public void seekTo(int pos) {
-        musicSrv.seek(pos);
+        //musicSrv.seek(pos);
     }
 
     @Override
@@ -148,6 +156,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
 
     @Override
     public int getBufferPercentage() {
+
         return 0;
     }
 
@@ -163,7 +172,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
 
     @Override
     public boolean canSeekForward() {
-        return true;
+        return false;
     }
 
     @Override
@@ -173,19 +182,22 @@ public class MainActivity extends Activity implements MediaPlayerControl{
 
     private  void  setController(){
         controller = new MusicController(this);
-        controller.setMediaPlayer(this);
-        controller.setAnchorView(findViewById(R.id.song_list));
-        controller.setEnabled(true);
-        controller.setPrevNextListeners(new View.OnClickListener() {
+        controller.setPrevNextListeners(
+            new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 playNext();
+                }
+            },
+            new View.OnClickListener(){
+                public void onClick(View v){
+
+                }
             }
-        }, new View.OnClickListener(){
-            public void onClick(View v){
-                playPrev();
-            }
-        });
+        );
+        controller.setMediaPlayer(this);
+        controller.setAnchorView(findViewById(R.id.song_list));
+        controller.setEnabled(true);
     }
     public void songPicked(View view){
         musicSrv.setSong(Integer.parseInt(view.getTag().toString()));
@@ -196,16 +208,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
         }
         controller.show(0);
     }
-    public boolean onOptionItemSelected(MenuItem item){
-        switch (item.getItemId()) {
-            case R.id.action_end:
-                stopService(playIntent);
-                musicSrv = null;
-                System.exit(0);
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+
     @Override
     protected  void onDestroy(){
         stopService(playIntent);
