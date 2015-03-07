@@ -124,8 +124,8 @@ public class MainActivity extends Activity implements MediaPlayerControl{
 
     @Override
     public void pause() {
-        playbackPaused=true;
         musicSrv.pausePlayer();
+        playbackPaused=true;
     }
 
     @Override
@@ -137,7 +137,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
 
     @Override
     public int getCurrentPosition() {
-        if(musicSrv != null && musicBound && musicSrv.isPng())
+        if(musicSrv != null && musicBound)
             return musicSrv.getPosn();
         else return 0;
     }
