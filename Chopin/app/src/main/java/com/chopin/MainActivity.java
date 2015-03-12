@@ -45,7 +45,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
         songView.setAdapter(songAdt);
         setController();
     }
-//testing2 for push
+//testing3 for push
     private ServiceConnection musicConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
