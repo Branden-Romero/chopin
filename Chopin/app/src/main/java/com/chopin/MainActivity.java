@@ -45,7 +45,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
         songView.setAdapter(songAdt);
         setController();
     }
-//testing3 for pushSlaton
+
     private ServiceConnection musicConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
@@ -53,7 +53,6 @@ public class MainActivity extends Activity implements MediaPlayerControl{
             musicSrv = binder.getService();
             musicSrv.setList(songList);
             musicBound = true;
-            System.out.print("hello");
         }
 
         @Override
