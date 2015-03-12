@@ -53,7 +53,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
             musicSrv = binder.getService();
             musicSrv.setList(songList);
             musicBound = true;
-            System.out.print("cam");
+            System.out.print("hello");
         }
 
         @Override
