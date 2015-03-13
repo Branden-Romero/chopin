@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import java.util.ArrayList;
@@ -35,7 +36,9 @@ public class MainActivity extends Activity implements MediaPlayerControl{
     private boolean musicBound = false;
     private boolean paused=false, playbackPaused=false;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
+        new ServletPostAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         songView = (ListView)findViewById(R.id.song_list);
@@ -75,6 +78,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
         return true;
     }
 
