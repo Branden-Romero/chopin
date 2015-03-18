@@ -142,7 +142,7 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
         if(songPosn < 0) songPosn=songs.size()-1;
         playSong();
     }
-    public void playNext(){
+    public void playNext(){ //Song.nextSong in progress to choose song based on influence
         songPosn++;
         if(songPosn > songs.size()-1)
             songPosn=0;
