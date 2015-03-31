@@ -10,9 +10,9 @@
       <configuration>
         <option name="HTTP_ADDRESS" value="localhost" />
         <option name="HTTP_PORT" value="8080" />
-        <option name="WAR_DIR" value="C:\Users\Slaton\Dropbox\School\2014-2015\Methods\chopin\chopin\Chopin\Backend\build\exploded-app" />
-        <option name="WEB_APP_DIR" value="C:\Users\Slaton\Dropbox\School\2014-2015\Methods\chopin\chopin\Chopin\Backend\src\main\webapp" />
-        <option name="APPENGINE_SDKROOT" value="C:\Users\Slaton\.gradle\appengine-sdk\appengine-java-sdk-1.9.14" />
+        <option name="WAR_DIR" value="C:\Users\Cameron\Desktop\chopin\chopin\Chopin\Backend\build\exploded-app" />
+        <option name="WEB_APP_DIR" value="C:\Users\Cameron\Desktop\chopin\chopin\Chopin\Backend\src\main\webapp" />
+        <option name="APPENGINE_SDKROOT" value="C:\Users\Cameron\.gradle\appengine-sdk\appengine-java-sdk-1.9.14" />
       </configuration>
     </facet>
     <facet type="java-gradle" name="Java-Gradle">
