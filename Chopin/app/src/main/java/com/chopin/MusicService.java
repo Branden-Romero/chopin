@@ -20,7 +20,8 @@ import android.app.PendingIntent;
 /**
  * Created by branden on 3/4/15.
  */
-public class MusicService extends Service implements MediaPlayer.OnPreparedListener, MediaPlayer.OnErrorListener, MediaPlayer.OnCompletionListener {
+public class
+        MusicService extends Service implements MediaPlayer.OnPreparedListener, MediaPlayer.OnErrorListener, MediaPlayer.OnCompletionListener {
     private MediaPlayer player;
     private ArrayList<Song> songs;
     private int songPosn;
