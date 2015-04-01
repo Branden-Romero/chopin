@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import java.util.ArrayList;
@@ -44,7 +45,8 @@ public class MainActivity extends Activity implements MediaPlayerControl{
         SongAdapter songAdt = new SongAdapter(this, songList);
         songView.setAdapter(songAdt);
         setController();
-    }
+
+}
 
     private ServiceConnection musicConnection = new ServiceConnection() {
         @Override
