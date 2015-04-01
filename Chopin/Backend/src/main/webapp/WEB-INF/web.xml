@@ -2,7 +2,7 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
     <servlet>
         <servlet-name>MyServlet</servlet-name>
-        <servlet-class>com.example.branden.myapplication.backend.MyServlet</servlet-class>
+        <servlet-class>com.chopin.Chopin.myapplication.backend.MyServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MyServlet</servlet-name>

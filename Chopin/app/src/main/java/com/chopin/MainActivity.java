@@ -35,8 +35,12 @@ public class MainActivity extends Activity implements MediaPlayerControl{
     private Intent playIntent;
     private boolean musicBound = false;
     private boolean paused=false, playbackPaused=false;
+
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
+
+        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         songView = (ListView)findViewById(R.id.song_list);
@@ -77,6 +81,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
         return true;
     }
 

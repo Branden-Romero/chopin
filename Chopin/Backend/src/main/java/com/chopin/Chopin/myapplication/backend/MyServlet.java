@@ -4,7 +4,7 @@
    https://github.com/GoogleCloudPlatform/gradle-appengine-templates/tree/master/HelloWorld
 */
 
-package com.example.branden.myapplication.backend;
+package com.chopin.Chopin.myapplication.backend;
 
 import java.io.IOException;
 

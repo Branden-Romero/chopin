@@ -23,4 +23,20 @@ public class Song {
     public String getArtist(){
         return artist;
     }
+
+    public Song nextSong(){  //Uncomment this section when database is implemented
+        /*String currID = ""+this.id;
+
+        Cursor c = sqLiteDatabase.query("SELECT * FROM Songs WHERE Songs.Id IN"
+                +" (SELECT Influences.Id FROM Influences WHERE Influences.Inf = "
+                + currID + ") ORDER BY NEWID();");
+
+        int idx = c.getColumnIndex("max");
+
+        Song s = new Song(c.Id,c.Title,c.Artist);
+
+        return s; */
+
+        return this;
+    }
 }

@@ -20,7 +20,8 @@ import android.app.PendingIntent;
 /**
  * Created by branden on 3/4/15.
  */
-public class MusicService extends Service implements MediaPlayer.OnPreparedListener, MediaPlayer.OnErrorListener, MediaPlayer.OnCompletionListener {
+public class
+        MusicService extends Service implements MediaPlayer.OnPreparedListener, MediaPlayer.OnErrorListener, MediaPlayer.OnCompletionListener {
     private MediaPlayer player;
     private ArrayList<Song> songs;
     private int songPosn;
@@ -142,7 +143,7 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
         if(songPosn < 0) songPosn=songs.size()-1;
         playSong();
     }
-    public void playNext(){
+    public void playNext(){ //Song.nextSong in progress to choose song based on influence
         songPosn++;
         if(songPosn > songs.size()-1)
             songPosn=0;

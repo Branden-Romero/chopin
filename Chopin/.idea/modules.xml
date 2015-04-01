@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Backend/Backend.iml" filepath="$PROJECT_DIR$/Backend/Backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chopin.iml" filepath="$PROJECT_DIR$/Chopin.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chopinBackend/chopinBackend.iml" filepath="$PROJECT_DIR$/chopinBackend/chopinBackend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend_Chopin/backend_Chopin.iml" filepath="$PROJECT_DIR$/backend_Chopin/backend_Chopin.iml" />
     </modules>
   </component>
 </project>
