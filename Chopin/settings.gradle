@@ -1,1 +1,1 @@
-include ':Backend', ':app', ':backend_Chopin'
+include ':app'
