@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">Chopin</string>
+    <string name="app_name">(Chop)in</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="discover">Discover.</string>
 </resources>

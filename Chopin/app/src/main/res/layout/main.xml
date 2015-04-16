@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#f1181d21"
+    tools:contex="com.chopin.MainActivity" >
+
+    <ListView
+        android:id="@+id/song_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffffff">
+    </ListView>
+
+</LinearLayout>

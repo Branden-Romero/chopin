@@ -1,15 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="#FFFFFFFF"
-    tools:contex="com.chopin.MainActivity" >
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1181d21"
+    android:weightSum="1">
 
-    <ListView
-        android:id="@+id/song_list"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-    </ListView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/app_name"
+        android:id="@+id/titleTextView"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffffff"
+        android:textStyle="italic"
+        android:textSize="75dp"
+        android:layout_weight="0.60"
+        android:gravity="center" />
 
+    <Button
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:text="@string/discover"
+        android:id="@+id/discoverButton"
+        android:layout_gravity="center"
+        android:background="#ff8330ff"
+        android:textColor="#ffffffff"
+        android:layout_weight="0.04"
+        android:onClick="discover"/>
 </LinearLayout>
+

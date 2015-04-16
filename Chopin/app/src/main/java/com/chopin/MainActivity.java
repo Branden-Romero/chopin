@@ -31,7 +31,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
     private ArrayList<Song> songList;
     private ListView songView;
     private MusicController controller;
-    private MusicService musicSrv;
+    private MusicService musicSrv = null;
     private Intent playIntent;
     private boolean musicBound = false;
     private boolean paused=false, playbackPaused=false;
@@ -40,17 +40,22 @@ public class MainActivity extends Activity implements MediaPlayerControl{
 
     protected void onCreate(Bundle savedInstanceState) {
 
-        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        songView = (ListView)findViewById(R.id.song_list);
-        songList = new ArrayList<Song>();
-        getSongList();
-        SongAdapter songAdt = new SongAdapter(this, songList);
-        songView.setAdapter(songAdt);
-        setController();
+        //songView = (ListView)findViewById(R.id.song_list);
+        //songList = new ArrayList<Song>();
+        //getSongList();
+        //SongAdapter songAdt = new SongAdapter(this, songList);
+        //songView.setAdapter(songAdt);
+        //setController();
 
 }
+    private View.OnClickListener discoverListener = new View.OnClickListener(){
+        public void onClick(View v) {
+            setContentView(R.layout.musicplayer);
+        }
+    };
 
     private ServiceConnection musicConnection = new ServiceConnection() {
         @Override
