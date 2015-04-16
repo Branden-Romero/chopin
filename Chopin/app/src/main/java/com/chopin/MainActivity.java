@@ -45,22 +45,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-<<<<<<< HEAD
-        //songView = (ListView)findViewById(R.id.song_list);
-        //songList = new ArrayList<Song>();
-        //getSongList();
-        //SongAdapter songAdt = new SongAdapter(this, songList);
-        //songView.setAdapter(songAdt);
-        //setController();
-
-}
-    private View.OnClickListener discoverListener = new View.OnClickListener(){
-        public void onClick(View v) {
-            setContentView(R.layout.musicplayer);
-        }
-    };
-=======
+        setContentView(R.layout.musicplayer);
         songView = (ListView)findViewById(R.id.song_list);
         songList = new ArrayList<Song>();
         getSongList();
@@ -68,8 +53,11 @@ public class MainActivity extends Activity implements MediaPlayerControl{
         songView.setAdapter(songAdt);
         setController();
         //detector = new SimpleGestureFilter(this,this); //SC01: uncomment to test
-    }
->>>>>>> 2fb1972a534a2d83a26f46f48df51c4c20673c09
+
+}
+
+
+
 
     private ServiceConnection musicConnection = new ServiceConnection() {
         @Override
