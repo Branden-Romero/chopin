@@ -2,14 +2,11 @@ package com.chopin;
 
 import android.app.Activity;
 import android.provider.MediaStore;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+
 import android.net.Uri;
 import android.content.ContentResolver;
 import android.database.Cursor;
@@ -21,12 +18,8 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.view.MenuItem;
-import android.view.View;
-import com.chopin.MusicService.MusicBinder;
-import com.chopin.SimpleGestureFilter.SimpleGestureListener;
-import android.view.MotionEvent;
 
+import com.chopin.MusicService.MusicBinder;
 
 
 public class MainActivity extends Activity implements MediaPlayerControl{
@@ -45,7 +38,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.musicplayer);
+        setContentView(R.layout.activity_main);
         songView = (ListView)findViewById(R.id.song_list);
         songList = new ArrayList<Song>();
         getSongList();
