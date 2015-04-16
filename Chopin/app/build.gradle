@@ -22,5 +22,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.0.0'
-    compile project(path: ':backend_Chopin', configuration: 'android-endpoints')
+    //compile project(path: ':backend_Chopin', configuration: 'android-endpoints')
 }

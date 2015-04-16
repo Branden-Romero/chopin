@@ -24,6 +24,8 @@ import android.content.ServiceConnection;
 import android.view.MenuItem;
 import android.view.View;
 import com.chopin.MusicService.MusicBinder;
+import com.chopin.SimpleGestureFilter.SimpleGestureListener;
+import android.view.MotionEvent;
 
 
 
@@ -35,6 +37,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
     private Intent playIntent;
     private boolean musicBound = false;
     private boolean paused=false, playbackPaused=false;
+    //private SimpleGestureFilter detector;  //SC01: uncomment to test
 
     @Override
 
@@ -43,6 +46,7 @@ public class MainActivity extends Activity implements MediaPlayerControl{
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+<<<<<<< HEAD
         //songView = (ListView)findViewById(R.id.song_list);
         //songList = new ArrayList<Song>();
         //getSongList();
@@ -56,6 +60,16 @@ public class MainActivity extends Activity implements MediaPlayerControl{
             setContentView(R.layout.musicplayer);
         }
     };
+=======
+        songView = (ListView)findViewById(R.id.song_list);
+        songList = new ArrayList<Song>();
+        getSongList();
+        SongAdapter songAdt = new SongAdapter(this, songList);
+        songView.setAdapter(songAdt);
+        setController();
+        //detector = new SimpleGestureFilter(this,this); //SC01: uncomment to test
+    }
+>>>>>>> 2fb1972a534a2d83a26f46f48df51c4c20673c09
 
     private ServiceConnection musicConnection = new ServiceConnection() {
         @Override
@@ -262,5 +276,32 @@ public class MainActivity extends Activity implements MediaPlayerControl{
         controller.hide();
         super.onStop();
     }
+
+    /*@Override
+    public boolean dispatchTouchEvent(MotionEvent me){
+        // Call onTouchEvent of SimpleGestureFilter class
+        this.detector.onTouchEvent(me);
+        return super.dispatchTouchEvent(me);
+    }*/   //SC01: uncomment to test
+
+    /*@Override
+    public void onSwipe(int direction) {
+
+        switch (direction) {
+            case SimpleGestureFilter.SWIPE_RIGHT : musicSrv.playNext();
+                break;
+            case SimpleGestureFilter.SWIPE_LEFT :  musicSrv.playNext();
+                break;
+            //case SimpleGestureFilter.SWIPE_DOWN :  str = "Swipe Down"; //Do we want these?
+            //    break;
+            //case SimpleGestureFilter.SWIPE_UP :    str = "Swipe Up";
+            //    break;
+        }
+    }   */   //SC01: uncomment to test
+
+    /*@Override
+    public void onDoubleTap() {
+         //do nothing right now...
+    }*/ //SC01: uncomment to test
 
 }
