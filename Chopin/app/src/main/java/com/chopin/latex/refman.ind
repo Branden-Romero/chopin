@@ -1,0 +1,60 @@
+\begin{theindex}
+
+  \item {com.\+chopin.\+Main\+Activity}, \hyperpage{5}
+  \item {com.\+chopin.\+Music\+Controller}, \hyperpage{12}
+  \item {com.\+chopin.\+Music\+Service}, \hyperpage{13}
+  \item {com.\+chopin.\+Music\+Service.\+Music\+Binder}, \hyperpage{11}
+  \item {com.\+chopin.\+Simple\+Gesture\+Filter}, \hyperpage{14}
+  \item {com.\+chopin.\+Song}, \hyperpage{16}
+  \item {com.\+chopin.\+Song\+Adapter}, \hyperpage{16}
+  \item {com\+::chopin\+::\+Main\+Activity}
+    \subitem {on\+Create}, \hyperpage{7}
+    \subitem {on\+Create\+Options\+Menu}, \hyperpage{7}
+    \subitem {on\+Double\+Tap}, \hyperpage{7}
+    \subitem {on\+Double\+Tap\+Event}, \hyperpage{7}
+    \subitem {on\+Down}, \hyperpage{7}
+    \subitem {on\+Fling}, \hyperpage{7}
+    \subitem {on\+Long\+Press}, \hyperpage{9}
+    \subitem {on\+Options\+Item\+Selected}, \hyperpage{9}
+    \subitem {on\+Scroll}, \hyperpage{9}
+    \subitem {on\+Show\+Press}, \hyperpage{9}
+    \subitem {on\+Single\+Tap\+Confirmed}, \hyperpage{9}
+    \subitem {on\+Single\+Tap\+Up}, \hyperpage{10}
+    \subitem {on\+Touch\+Event}, \hyperpage{10}
+    \subitem {song\+Picked}, \hyperpage{10}
+
+  \indexspace
+
+  \item {on\+Create}
+    \subitem {com\+::chopin\+::\+Main\+Activity}, \hyperpage{7}
+  \item {on\+Create\+Options\+Menu}
+    \subitem {com\+::chopin\+::\+Main\+Activity}, \hyperpage{7}
+  \item {on\+Double\+Tap}
+    \subitem {com\+::chopin\+::\+Main\+Activity}, \hyperpage{7}
+  \item {on\+Double\+Tap\+Event}
+    \subitem {com\+::chopin\+::\+Main\+Activity}, \hyperpage{7}
+  \item {on\+Down}
+    \subitem {com\+::chopin\+::\+Main\+Activity}, \hyperpage{7}
+  \item {on\+Fling}
+    \subitem {com\+::chopin\+::\+Main\+Activity}, \hyperpage{7}
+  \item {on\+Long\+Press}
+    \subitem {com\+::chopin\+::\+Main\+Activity}, \hyperpage{9}
+  \item {on\+Options\+Item\+Selected}
+    \subitem {com\+::chopin\+::\+Main\+Activity}, \hyperpage{9}
+  \item {on\+Scroll}
+    \subitem {com\+::chopin\+::\+Main\+Activity}, \hyperpage{9}
+  \item {on\+Show\+Press}
+    \subitem {com\+::chopin\+::\+Main\+Activity}, \hyperpage{9}
+  \item {on\+Single\+Tap\+Confirmed}
+    \subitem {com\+::chopin\+::\+Main\+Activity}, \hyperpage{9}
+  \item {on\+Single\+Tap\+Up}
+    \subitem {com\+::chopin\+::\+Main\+Activity}, \hyperpage{10}
+  \item {on\+Touch\+Event}
+    \subitem {com\+::chopin\+::\+Main\+Activity}, \hyperpage{10}
+
+  \indexspace
+
+  \item {song\+Picked}
+    \subitem {com\+::chopin\+::\+Main\+Activity}, \hyperpage{10}
+
+\end{theindex}
