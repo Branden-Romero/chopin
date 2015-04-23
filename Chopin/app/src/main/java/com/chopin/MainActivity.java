@@ -26,6 +26,12 @@ import android.content.ServiceConnection;
 
 import com.chopin.MusicService.MusicBinder;
 
+/**@mainpage (Chop)in
+ * @author Branden Romero, Mason McNutt, Slaton Spangler, Cameron Tierney
+ * @section intro Introduction
+ * (Chop)in is a music discovery app that enables user's to discover new music
+ * quickly.
+ */
 
 public class MainActivity extends Activity implements GestureDetector.OnGestureListener,
         GestureDetector.OnDoubleTapListener, MediaPlayerControl{
@@ -43,7 +49,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     //private SimpleGestureFilter detector;  //SC01: uncomment to test
 
     /**
-     *
+     * Start-up procedure. Sets song list as start page and populates the song list.
      * @param savedInstanceState
      */
     @Override
@@ -65,7 +71,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 }
 
     /**
-     *
+     * Catches all gestures.
      * @param event
      * @return
      */
@@ -77,7 +83,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     }
 
     /**
-     *
+     * After a gesture is caught and the motion is picked up as a downward motion it does nothing.
      * @param event
      * @return
      */
@@ -88,7 +94,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     }
 
     /**
-     *
+     * If the onTouchEvent catches a horizontal gesture, it plays next song.
      * @param event1
      * @param event2
      * @param velocityX
@@ -104,7 +110,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     }
 
     /**
-     *
+     * If the onTouchEvent catches a long press, then it will pause the music.
      * @param event
      */
     @Override
@@ -113,7 +119,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     }
 
     /**
-     *
+     * Will be implemented for menus.
      * @param e1
      * @param e2
      * @param distanceX
@@ -214,7 +220,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     };
 
     /**
-     *
+     *Sets up the music player
      */
     @Override
     protected void onStart(){
@@ -227,7 +233,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     }
 
     /**
-     *
+     * Default Android method for menus
      * @param menu
      * @return
      */
@@ -240,7 +246,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     }
 
     /**
-     *
+     * Performs operation on menu item select
      * @param item
      * @return
      */
@@ -265,7 +271,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     }
 
     /**
-     *
+     * Used by oncreate to populate the song list using the SongAdapter and Song class
      */
     public void getSongList(){
         ContentResolver musicResolver = getContentResolver();
@@ -287,11 +293,15 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     }
 
     @Override
+    /**
+     * Plays the song at which the music cursor is placed.
+     */
     public void start() {
         musicSrv.go();
     }
 
     @Override
+
     public void pause() {
         musicSrv.pausePlayer();
         playbackPaused=true;
@@ -349,6 +359,9 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
         return 0;
     }
 
+    /**
+     * Enables the built in android music controller, and sets up a listener to listen for clicks
+     */
     private  void  setController(){
         controller = new MusicController(this);
         controller.setPrevNextListeners(
