@@ -8,6 +8,7 @@ public class Song {
     private String title;
     private String artist;
 
+
     public Song(long songID, String songTitle, String songArtist){
         id = songID;
         title = songTitle;
