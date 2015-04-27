@@ -151,6 +151,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     @Override
     public boolean onSingleTapUp(MotionEvent event) {
         Log.d(DEBUG_TAG, "onSingleTapUp: " + event.toString());
+        
         return true;
     }
 
@@ -162,7 +163,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     @Override
     public boolean onDoubleTap(MotionEvent event) {
         Log.d(DEBUG_TAG, "onDoubleTap: " + event.toString());
-        //musicSrv.playNext();
+        musicSrv.seek(0);
         return true;
     }
 
@@ -323,7 +324,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
     @Override
     public void seekTo(int pos) {
-        //musicSrv.seek(pos);
+        musicSrv.seek(pos);
     }
 
     @Override
@@ -389,11 +390,14 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     public void songPicked(View view){
         musicSrv.setSong(Integer.parseInt(view.getTag().toString()));
         musicSrv.playSong();
+        int duration = getDuration();
+        musicSrv.seek(30 * 60 * 1000);
         if(playbackPaused){
             setController();
             playbackPaused=false;
         }
         controller.show(0);
+
     }
 
     @Override
