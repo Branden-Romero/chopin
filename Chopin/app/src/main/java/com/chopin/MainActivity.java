@@ -116,6 +116,12 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     @Override
     public void onLongPress(MotionEvent event) {
         Log.d(DEBUG_TAG, "onLongPress: " + event.toString());
+        if(!playbackPaused)
+            pause();
+        else {
+            musicSrv.go();
+            playbackPaused = false;
+        }
     }
 
     /**
@@ -186,11 +192,6 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     @Override
     public boolean onSingleTapConfirmed(MotionEvent event) {
         Log.d(DEBUG_TAG, "onSingleTapConfirmed: " + event.toString());
-
-        if(isPlaying())
-            musicSrv.pausePlayer();
-        else
-            musicSrv.playSong();
 
         return true;
     }
