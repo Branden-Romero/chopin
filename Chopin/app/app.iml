@@ -100,10 +100,10 @@
     <orderEntry type="library" exported="" name="appcompat-v7-22.0.0" level="project" />
     <orderEntry type="library" exported="" name="google-api-client-android-1.19.0" level="project" />
 =======
+>>>>>>> b4e5c149ad0c5f69e661a38656d2a7c4c6e5644b
     <orderEntry type="library" exported="" name="appcompat-v7-22.0.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-22.0.0" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-22.0.0" level="project" />
->>>>>>> 2fb1972a534a2d83a26f46f48df51c4c20673c09
   </component>
 </module>
 

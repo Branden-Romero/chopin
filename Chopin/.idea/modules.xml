@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Chopin.iml" filepath="$PROJECT_DIR$/Chopin.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend_chopin/backend_chopin.iml" filepath="$PROJECT_DIR$/backend_chopin/backend_chopin.iml" />
     </modules>
   </component>
 </project>
