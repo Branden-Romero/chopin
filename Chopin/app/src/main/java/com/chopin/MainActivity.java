@@ -151,7 +151,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     @Override
     public boolean onSingleTapUp(MotionEvent event) {
         Log.d(DEBUG_TAG, "onSingleTapUp: " + event.toString());
-        
+
         return true;
     }
 
