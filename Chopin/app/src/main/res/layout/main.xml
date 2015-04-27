@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="#f1181d21"
+    android:background="#FF801780"
     tools:contex="com.chopin.MainActivity" >
 
     <ListView

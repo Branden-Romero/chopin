@@ -10,7 +10,7 @@ import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
 import java.util.ArrayList;
-
+import java.lang.Thread;
 import android.net.Uri;
 import android.content.ContentResolver;
 import android.database.Cursor;
@@ -106,6 +106,14 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
                            float velocityX, float velocityY) {
         Log.d(DEBUG_TAG, "onFling: " + event1.toString()+event2.toString());
         musicSrv.playNext();
+
+        try {
+            Thread.sleep(1000);
+        }catch (InterruptedException e){
+            System.out.println("got interuppted!");
+        }
+        int dur = musicSrv.getDur();
+        seekTo(dur - (30*1000));
         return true;
     }
 
@@ -157,7 +165,8 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     @Override
     public boolean onSingleTapUp(MotionEvent event) {
         Log.d(DEBUG_TAG, "onSingleTapUp: " + event.toString());
-
+        int dur = getDuration();
+        seekTo(dur - (30*1000));
         return true;
     }
 
@@ -391,13 +400,18 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     public void songPicked(View view){
         musicSrv.setSong(Integer.parseInt(view.getTag().toString()));
         musicSrv.playSong();
-        int duration = getDuration();
-        musicSrv.seek(30 * 60 * 1000);
         if(playbackPaused){
             setController();
             playbackPaused=false;
         }
         controller.show(0);
+        try {
+            Thread.sleep(1000);
+        }catch (InterruptedException e){
+            System.out.println("got interuppted!");
+        }
+        int dur = musicSrv.getDur();
+        seekTo(dur - (30*1000));
 
     }
 
@@ -414,7 +428,9 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
             setController();
             playbackPaused=false;
         }
+
         controller.show(0);
+
     }
     private void playPrev(){
         musicSrv.playPrev();

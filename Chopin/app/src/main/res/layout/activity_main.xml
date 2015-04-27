@@ -3,13 +3,14 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="#FFFFFFFF"
+    android:background="@android:drawable/title_bar_tall"
     tools:contex="com.chopin.MainActivity" >
 
     <ListView
         android:id="@+id/song_list"
         android:layout_width="fill_parent"
-        android:layout_height="250dp">
+        android:layout_height="250dp"
+        android:background="#ffffffff">
     </ListView>
 
 </LinearLayout>
