@@ -50,7 +50,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
     /**
      * Start-up procedure. Sets song list as start page and populates the song list.
-     * @param savedInstanceState
+     * @param savedInstanceState Android default
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +72,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
     /**
      * Catches all gestures.
-     * @param event
+     * @param event Filtered gesture movement
      * @return
      */
     @Override
@@ -84,7 +84,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
     /**
      * After a gesture is caught and the motion is picked up as a downward motion it does nothing.
-     * @param event
+     * @param event Filtered gesture movement
      * @return
      */
     @Override
@@ -95,10 +95,10 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
     /**
      * If the onTouchEvent catches a horizontal gesture, it plays next song.
-     * @param event1
-     * @param event2
-     * @param velocityX
-     * @param velocityY
+     * @param event1 Gesture event
+     * @param event2 Gesture event
+     * @param velocityX Length of the swipe in the X-direction
+     * @param velocityY distanceY Length of the swipe in the Y-direction
      * @return
      */
     @Override
@@ -111,7 +111,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
     /**
      * If the onTouchEvent catches a long press, then it will pause the music.
-     * @param event
+     * @param event Filtered gesture movement
      */
     @Override
     public void onLongPress(MotionEvent event) {
@@ -120,10 +120,10 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
     /**
      * Will be implemented for menus.
-     * @param e1
-     * @param e2
-     * @param distanceX
-     * @param distanceY
+     * @param e1 Gesture event
+     * @param e2 Gesture event
+     * @param distanceX Length of the swipe in the X-direction
+     * @param distanceY Length of the swipe in the Y-direction
      * @return
      */
     @Override
@@ -136,7 +136,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
     /**
      *
-     * @param event
+     * @param event Filtered gesture movement
      */
     @Override
     public void onShowPress(MotionEvent event) {
@@ -145,7 +145,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
     /**
      *
-     * @param event
+     * @param event Filtered gesture movement
      * @return
      */
     @Override
@@ -156,7 +156,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
     /**
      *
-     * @param event
+     * @param event Filtered gesture movement
      * @return
      */
     @Override
@@ -168,7 +168,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
     /**
      *
-     * @param event
+     * @param event Filtered gesture movement
      * @return
      */
     @Override
@@ -179,7 +179,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
     /**
      *
-     * @param event
+     * @param event Filtered gesture movement
      * @return
      */
     @Override
@@ -197,7 +197,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
     private ServiceConnection musicConnection = new ServiceConnection() {
         /**
          *
-         * @param name
+         * @param name Music service
          * @param service
          */
         @Override
@@ -210,7 +210,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
         /**
          *
-         * @param name
+         * @param name Disconnects Binder at the end
          */
         @Override
         public void onServiceDisconnected(ComponentName name) {
@@ -234,7 +234,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
     /**
      * Default Android method for menus
-     * @param menu
+     * @param menu The menu created by android
      * @return
      */
     @Override
@@ -247,7 +247,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
     /**
      * Performs operation on menu item select
-     * @param item
+     * @param item Items in the menu to be selected
      * @return
      */
     @Override
@@ -384,7 +384,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
 
     /**
      *
-     * @param view
+     * @param view Song list view.
      */
     public void songPicked(View view){
         musicSrv.setSong(Integer.parseInt(view.getTag().toString()));

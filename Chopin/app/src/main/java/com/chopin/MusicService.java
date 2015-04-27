@@ -154,4 +154,8 @@ public class
         stopForeground(true);
     }
 
+    public int getSongPosn() {
+        return songPosn;
+    }
+
 }
