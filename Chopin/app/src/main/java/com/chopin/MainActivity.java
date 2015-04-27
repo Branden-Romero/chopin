@@ -380,7 +380,7 @@ public class MainActivity extends Activity implements GestureDetector.OnGestureL
             }
         );
         controller.setMediaPlayer(this);
-        controller.setAnchorView(findViewById(R.id.song_list));
+        //controller.setAnchorView(findViewById(R.id.song_list));
         //controller.setEnabled(true);
     }
 
