@@ -1,0 +1,30 @@
+Repo Organization:
+
+	-The java files are located under: 
+			Chopin/app/scr/main/java/com/chopin directory.
+
+	-The xml files are located under:
+			Chopin/app/scr/main/res/
+
+	-The  autodocs are located under:
+			 Chopin/app/scr/main/java/com/chopin/latex 
+			 (at the bottom in the refman.pdf file)
+	
+	-The backend/database that we attempted to hookup to the Google
+	cloud platform are under:
+			Chopin/backend_chopin
+
+Where to find and how to build:
+	
+	Deployment: Our app is deployed to slideme.org: http://slideme.org/application/chop
+
+	To use our app, download the .apk file from the link above and then follow these instructions (you will need an android device or emulator):
+	http://www.ubergizmo.com/how-to/how-to-install-apk-files-sideloading-on-android/
+	If you do not have an android device or emulator, please contact a member of our group and we will provide you with one to test our app. 
+	Note: you will also need at least two songs stored locally on the device to be able to test the app functionality.
+
+	Notes on functionality:
+	Swipe any direction: Indicates disliking a song, skips to next song
+	Double tap: Indicates liking a song, plays full song instead of clip
+	Single tap: Restarts current short clip
+	Hold: Pause/Play
